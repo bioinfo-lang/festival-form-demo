@@ -1,0 +1,63 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 40px;
+  line-height: 1.6;
+}
+h2, h3 {
+  text-align: center;
+  margin: 5px 0;
+}
+.form-container {
+  max-width: 800px;
+  margin: auto;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.inline-group {
+  display: flex;
+  gap: 10px;
+}
+.inline-group input {
+  flex: 1;
+}
+textarea {
+  height: 80px;
+}
+.signature {
+  margin-top: 40px;
+  text-align: right;
+  font-style: italic;
+}
+.instructions {
+  margin-top: 40px;
+  border-top: 1px solid #000;
+  padding-top: 20px;
+}
+ol {
+  padding-left: 20px;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-no {
+  text-align: right;
+  font-weight: bold;
+}
