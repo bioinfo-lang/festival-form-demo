@@ -106,7 +106,7 @@
     </div>
   </div>
 
- <script>
+<script>
   document.getElementById("submit-btn").addEventListener("click", async function () {
     const form = document.getElementById("entry-form");
 
@@ -128,29 +128,28 @@
       items_participation: form.items_participation.value
     };
 
-    console.log("Submitting form...", formData);
-
     try {
-      const resp = await fetch("https://script.google.com/macros/s/AKfycbwOisN44piV2yJRrmq-8thqPi7QviWkWPi0Hll_7rGC0Pv7VFVdLIN-6u28jgFVUXCj/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbwOisN44piV2yJRrmq-8thqPi7QviWkWPi0Hll_7rGC0Pv7VFVdLIN-6u28jgFVUXCj/exec", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
           "Content-Type": "application/json"
         },
-        mode: "no-cors"
+        mode: "no-cors" // ✅ CORRECT placement
       });
 
-      alert("Form Submitted, Now Printing...");
+      alert("Form submitted! Now printing...");
       window.print();
     } catch (err) {
       console.error("Error submitting form:", err);
-      alert("Error occurred during submission.");
+      alert("Something went wrong.");
     }
   });
 </script>
 
 </body>
 </html>
+
 
 
 
