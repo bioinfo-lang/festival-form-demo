@@ -136,16 +136,12 @@
         body: JSON.stringify(formData),
         headers: {
           "Content-Type": "application/json"
-        }
+        },
         mode: "no-cors"
       });
 
-      if (resp.ok) {
-        alert("Submitted!");
-        window.print();
-      } else {
-        alert("Submission failed.");
-      }
+      alert("Form Submitted, Now Printing...");
+      window.print();
     } catch (err) {
       console.error("Error submitting form:", err);
       alert("Error occurred during submission.");
@@ -155,6 +151,7 @@
 
 </body>
 </html>
+
 
 
 
