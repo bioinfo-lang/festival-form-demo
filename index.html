@@ -3,198 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registration Form</title>
+  <title>Entry Form — Youth & Heritage Festival</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f7f7f7;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    form {
-      background: white;
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .form-row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    label {
-      width: 200px;
-      font-weight: bold;
-    }
-
-    input, select, textarea {
-      flex: 1;
-      padding: 6px;
-      font-size: 14px;
-    }
-
-    button {
-      display: block;
-      margin: 20px auto 0;
-      padding: 10px 20px;
-      font-size: 16px;
-      background: #1976d2;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #145ca1;
-    }
-
     @media print {
-      body {
-        margin: 0;
-        padding: 0;
-        zoom: 90%;
-      }
-
-      #submit-btn, .no-print {
-        display: none !important;
-      }
-
-      form {
-        box-shadow: none;
-        padding: 0;
-      }
-
-      input, select, textarea {
-        border: none;
-        background: none;
-        box-shadow: none;
-        font-size: 12px;
-      }
-
-      label {
-        font-weight: normal;
+      button {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <h1>College Registration Form</h1>
-
-  <form id="entry-form">
-    <div class="form-row">
-      <label for="zone">Zone:</label>
-      <input type="text" id="zone" name="zone" required />
-    </div>
-    <div class="form-row">
-      <label for="session">Session:</label>
-      <input type="text" id="session" name="session" required />
-    </div>
-    <div class="form-row">
-      <label for="venue">Venue:</label>
-      <input type="text" id="venue" name="venue" required />
-    </div>
-    <div class="form-row">
-      <label for="date_from">Date From:</label>
-      <input type="date" id="date_from" name="date_from" required />
-    </div>
-    <div class="form-row">
-      <label for="date_to">Date To:</label>
-      <input type="date" id="date_to" name="date_to" required />
-    </div>
-    <div class="form-row">
-      <label for="college">College Name:</label>
-      <input type="text" id="college" name="college" required />
-    </div>
-    <div class="form-row">
-      <label for="contingent_incharge">Contingent In-charge:</label>
-      <input type="text" id="contingent_incharge" name="contingent_incharge" required />
-    </div>
-    <div class="form-row">
-      <label for="contact_email">Contact Email:</label>
-      <input type="email" id="contact_email" name="contact_email" required />
-    </div>
-    <div class="form-row">
-      <label for="students_male">Students (Male):</label>
-      <input type="number" id="students_male" name="students_male" required />
-    </div>
-    <div class="form-row">
-      <label for="students_female">Students (Female):</label>
-      <input type="number" id="students_female" name="students_female" required />
-    </div>
-    <div class="form-row">
-      <label for="teachers_male">Teachers (Male):</label>
-      <input type="number" id="teachers_male" name="teachers_male" required />
-    </div>
-    <div class="form-row">
-      <label for="teachers_female">Teachers (Female):</label>
-      <input type="number" id="teachers_female" name="teachers_female" required />
-    </div>
-    <div class="form-row">
-      <label for="accompanists_male">Accompanists (Male):</label>
-      <input type="number" id="accompanists_male" name="accompanists_male" required />
-    </div>
-    <div class="form-row">
-      <label for="accompanists_female">Accompanists (Female):</label>
-      <input type="number" id="accompanists_female" name="accompanists_female" required />
-    </div>
-    <div class="form-row">
-      <label for="items_participation">Items Participating In:</label>
-      <textarea id="items_participation" name="items_participation" rows="3" required></textarea>
+  <div class="form-container">
+    <div class="form-no">Form No. I</div>
+    <div class="form-header">
+      <h2>DEPARTMENT OF YOUTH WELFARE, PANJAB UNIVERSITY, CHANDIGARH</h2>
+      <h3>YOUTH & HERITAGE FESTIVAL</h3>
+      <h3>ENTRY FORM</h3>
     </div>
 
-    <button type="button" id="submit-btn">Submit & Print</button>
-  </form>
+    <form id="entry-form">
+      <div class="form-group">
+        <label>Zone</label>
+        <input type="text" name="zone" required>
+      </div>
+      <div class="form-group">
+        <label>Session</label>
+        <input type="text" name="session" required>
+      </div>
+      <div class="form-group">
+        <label>Venue</label>
+        <input type="text" name="venue">
+      </div>
+      <div class="form-group inline-group">
+        <div>
+          <label>Date: From</label>
+          <input type="date" name="date_from">
+        </div>
+        <div>
+          <label>To</label>
+          <input type="date" name="date_to">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>College</label>
+        <input type="text" name="college">
+      </div>
+      <div class="form-group">
+        <label>Name of Contingent In-charge</label>
+        <input type="text" name="contingent_incharge">
+      </div>
+      <div class="form-group">
+        <label>Contact no. / Email</label>
+        <input type="text" name="contact_email">
+      </div>
+      <div class="form-group">
+        <label>Total No. of Student participants</label>
+        <div class="inline-group">
+          <input type="number" name="students_male" placeholder="Male" min="0">
+          <input type="number" name="students_female" placeholder="Female" min="0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Total No. of Teacher/Directors of items</label>
+        <div class="inline-group">
+          <input type="number" name="teachers_male" placeholder="Male" min="0">
+          <input type="number" name="teachers_female" placeholder="Female" min="0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Total No. of Professional Accompanists</label>
+        <div class="inline-group">
+          <input type="number" name="accompanists_male" placeholder="Male" min="0">
+          <input type="number" name="accompanists_female" placeholder="Female" min="0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Items of participation</label>
+        <textarea name="items_participation"></textarea>
+      </div>
+      <div class="signature">
+        Signature of Principal<br>
+        (with office seal)
+      </div>
+    </form>
 
-  <script>
-    document.getElementById("submit-btn").addEventListener("click", async function () {
-      const form = document.getElementById("entry-form");
+    <div style="text-align: center; margin-top: 30px;">
+      <button id="submit-btn" style="padding: 10px 20px; font-size: 16px;">Submit & Print</button>
+    </div>
 
-      const formData = {
-        zone: form.zone.value,
-        session: form.session.value,
-        venue: form.venue.value,
-        date_from: form.date_from.value,
-        date_to: form.date_to.value,
-        college: form.college.value,
-        contingent_incharge: form.contingent_incharge.value,
-        contact_email: form.contact_email.value,
-        students_male: form.students_male.value,
-        students_female: form.students_female.value,
-        teachers_male: form.teachers_male.value,
-        teachers_female: form.teachers_female.value,
-        accompanists_male: form.accompanists_male.value,
-        accompanists_female: form.accompanists_female.value,
-        items_participation: form.items_participation.value
-      };
+    <div class="instructions">
+      <h4><u>IMPORTANT INSTRUCTIONS</u></h4>
+      <ol>
+        <li>Incomplete entry form will not be accepted in any case.</li>
+        <li>All entries should be typewritten/block letters.</li>
+        <li>Entries should be strictly according to the rules and regulations contained in the Information and Rules booklet.</li>
+        <li>
+          Separate forms for each student (Form No. II), each Teacher (Form No. III), 
+          each Accompanist (Form No. IV) and each item (Form No. V) must be submitted along with this form.
+        </li>
+      </ol>
+    </div>
+  </div>
 
-      try {
-        await fetch("https://script.google.com/macros/s/AKfycbwOisN44piV2yJRrmq-8thqPi7QviWkWPi0Hll_7rGC0Pv7VFVdLIN-6u28jgFVUXCj/exec", {
-          method: "POST",
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-Type": "application/json"
-          },
-          mode: "no-cors"
-        });
+ <script>
+  document.getElementById("submit-btn").addEventListener("click", async function () {
+    const form = document.getElementById("entry-form");
 
-        alert("Form submitted! Now printing...");
+    const formData = {
+      zone: form.zone.value,
+      session: form.session.value,
+      venue: form.venue.value,
+      date_from: form.date_from.value,
+      date_to: form.date_to.value,
+      college: form.college.value,
+      contingent_incharge: form.contingent_incharge.value,
+      contact_email: form.contact_email.value,
+      students_male: form.students_male.value,
+      students_female: form.students_female.value,
+      teachers_male: form.teachers_male.value,
+      teachers_female: form.teachers_female.value,
+      accompanists_male: form.accompanists_male.value,
+      accompanists_female: form.accompanists_female.value,
+      items_participation: form.items_participation.value
+    };
+
+    console.log("Submitting form...", formData);
+
+    try {
+      const resp = await fetch("https://script.google.com/macros/s/AKfycbwOisN44piV2yJRrmq-8thqPi7QviWkWPi0Hll_7rGC0Pv7VFVdLIN-6u28jgFVUXCj/exec", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        mode: "no-cors"
+      });
+
+      if (resp.ok) {
+        alert("Submitted!");
         window.print();
-      } catch (err) {
-        console.error("Error submitting form:", err);
-        alert("Something went wrong.");
+      } else {
+        alert("Submission failed.");
       }
-    });
-  </script>
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      alert("Error occurred during submission.");
+    }
+  });
+</script>
+
 </body>
 </html>
-
